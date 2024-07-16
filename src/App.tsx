@@ -16,13 +16,16 @@ const App = () => {
   const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID
   const appleClientId = import.meta.env.VITE_APPLE_CLIENT_ID
   const appleRedirectURI = window.location.origin + window.location.pathname
+  const walletConnectId = import.meta.env.VITE_WALLET_CONNECT_ID
+
 
   const connectors = getDefaultWaasConnectors({
-    walletConnectProjectId: 'wallet-connect-id',
+    walletConnectProjectId: walletConnectId,
     waasConfigKey,
     googleClientId,
-    appleClientId,
-    appleRedirectURI,
+    // Notice: uncomment to use Apple if deployed on https to support Apple redirects
+    // appleClientId,
+    // appleRedirectURI,
     defaultChainId: 137,
     appName: 'Kit Starter',
     projectAccessKey
