@@ -1,0 +1,33 @@
+name: build dapp
+
+on: [push]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    if: github.ref != 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/install-dependencies
+      - run: pnpm build
+
+  deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/install-dependencies
+
+      - name: Build
+        run: pnpm build
+
+      - name: Deploy
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: build
+          FOLDER: dist
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MESSAGE: 'Deploy: ({sha}) {msg}'
