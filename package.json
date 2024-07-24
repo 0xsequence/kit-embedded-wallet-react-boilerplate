@@ -1,36 +1,37 @@
 {
-  "name": "kit-boiler-plate",
-  "private": true,
+  "name": "kit-embedded-wallet-react-boilerplate",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 && prettier --write --ignore-path .gitignore .",
     "preview": "vite preview"
   },
   "dependencies": {
-    "0xsequence": "^1.9.36",
-    "@0xsequence/kit": "^2.8.11",
-    "@0xsequence/kit-connectors": "^2.8.11",
-    "@tanstack/react-query": "^5.50.1",
+    "0xsequence": "^1.10.3",
+    "@0xsequence/kit": "^2.9.2",
+    "@0xsequence/kit-connectors": "^2.9.2",
+    "@tanstack/react-query": "^5.51.11",
     "ethers": "5.7.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "viem": "^2.17.3",
-    "wagmi": "^2.10.9"
+    "viem": "^2.17.11",
+    "wagmi": "^2.12.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^7.13.1",
-    "@typescript-eslint/parser": "^7.13.1",
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "@typescript-eslint/parser": "^7.17.0",
     "@vitejs/plugin-react": "^4.3.1",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.7",
-    "typescript": "^5.2.2",
-    "vite": "^5.3.1"
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4",
+    "vite": "^5.3.4"
   },
   "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903"
 }

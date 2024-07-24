@@ -2,6 +2,7 @@ import Home from './views/Home'
 import { KitProvider } from '@0xsequence/kit'
 import { getDefaultWaasConnectors } from '@0xsequence/kit-connectors'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { Transport } from 'viem'
 import { createConfig, http, WagmiProvider } from 'wagmi'
 import { mainnet, polygon, Chain } from 'wagmi/chains'
 
@@ -31,7 +32,7 @@ const App = () => {
     projectAccessKey
   })
 
-  const transports: { [key: number]: any } = {}
+  const transports: { [key: number]: Transport } = {}
 
   chains.forEach(chain => {
     transports[chain.id] = http()
