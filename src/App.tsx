@@ -12,7 +12,8 @@ const App = () => {
 
   // Get your own keys on sequence.build
   const projectAccessKey =
-    import.meta.env.VITE_PROJECT_ACCESS_KEY || "AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI";
+    import.meta.env.VITE_PROJECT_ACCESS_KEY ||
+    "AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI";
   const waasConfigKey =
     import.meta.env.VITE_WAAS_CONFIG_KEY ||
     "eyJwcm9qZWN0SWQiOjE2ODE1LCJlbWFpbFJlZ2lvbiI6ImNhLWNlbnRyYWwtMSIsImVtYWlsQ2xpZW50SWQiOiI2N2V2NXVvc3ZxMzVmcGI2OXI3NnJoYnVoIiwicnBjU2VydmVyIjoiaHR0cHM6Ly93YWFzLnNlcXVlbmNlLmFwcCJ9";
