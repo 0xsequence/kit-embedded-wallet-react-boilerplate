@@ -1,7 +1,7 @@
 name: Setup Node and PNPM dependencies
 
 runs:
-  using: 'composite'
+  using: "composite"
 
   steps:
     - name: Setup PNPM
