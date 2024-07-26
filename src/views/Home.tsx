@@ -1,43 +1,16 @@
-import { useOpenConnectModal } from "@0xsequence/kit";
-import { useDisconnect, useAccount } from "wagmi";
+import { useAccount } from "wagmi";
 
 import "./Home.css";
+import Connected from "./Connected";
+import NotConnected from "./components/NotConnected";
 
-const App = () => {
-  const { setOpenConnectModal } = useOpenConnectModal();
-  const { isConnected, address } = useAccount();
-  const { disconnect } = useDisconnect();
-
-  const onClickConnect = () => {
-    setOpenConnectModal(true);
-  };
-
-  const onClickDisconnect = () => {
-    disconnect();
-  };
-
-  const Connected = () => (
-    <>
-      <p>Connected with address: {address}</p>
-      <div className="card">
-        <button onClick={onClickDisconnect}>Disconnect</button>
-      </div>
-    </>
-  );
-
-  const Disconnected = () => (
-    <>
-      <p>Not connected</p>
-      <div className="card">
-        <button onClick={onClickConnect}>Connect</button>
-      </div>
-    </>
-  );
+const Home = () => {
+  const { isConnected } = useAccount();
 
   return (
     <div>
       <h1>Sequence Kit Starter</h1>
-      {isConnected ? <Connected /> : <Disconnected />}
+      {isConnected ? <Connected /> : <NotConnected />}
       <footer>
         Want to learn more? Read the{" "}
         <a
@@ -55,4 +28,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;
