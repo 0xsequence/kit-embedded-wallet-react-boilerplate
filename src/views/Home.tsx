@@ -5,12 +5,12 @@ import Connected from "./Connected";
 import NotConnected from "./components/NotConnected";
 
 const Home = () => {
-  const { address, isConnected } = useAccount();
+  const { isConnected } = useAccount();
 
   return (
     <div>
       <h1>Sequence Kit Starter</h1>
-      {isConnected ? <Connected address={address} /> : <NotConnected />}
+      {isConnected ? <Connected /> : <NotConnected />}
       <footer>
         Want to learn more? Read the{" "}
         <a

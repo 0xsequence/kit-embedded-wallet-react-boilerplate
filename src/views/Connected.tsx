@@ -1,9 +1,10 @@
-import { useDisconnect } from "wagmi";
+import { useAccount, useDisconnect } from "wagmi";
 
 import "./Home.css";
 
-const Connected = (props: { address: `0x${string}` | undefined }) => {
+const Connected = () => {
   const { disconnect } = useDisconnect();
+  const { address } = useAccount();
 
   const onClickDisconnect = () => {
     disconnect();
@@ -11,7 +12,7 @@ const Connected = (props: { address: `0x${string}` | undefined }) => {
 
   return (
     <>
-      <p>Connected with address: {props.address}</p>
+      <p>Connected with address: {address}</p>
       <div className="card">
         <button onClick={onClickDisconnect}>Disconnect</button>
       </div>
