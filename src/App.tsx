@@ -13,10 +13,10 @@ const App = () => {
   // Get your own keys on sequence.build
   const projectAccessKey =
     import.meta.env.VITE_PROJECT_ACCESS_KEY ||
-    "AQAAAAAAAHjtb-N2keYpJkxfcHroYLjsFRE";
+    "AQAAAAAAADVH8R2AGuQhwQ1y8NaEf1T7PJM";
   const waasConfigKey =
     import.meta.env.VITE_WAAS_CONFIG_KEY ||
-    "eyJwcm9qZWN0SWQiOjMwOTU3LCJlbWFpbFJlZ2lvbiI6ImNhLWNlbnRyYWwtMSIsImVtYWlsQ2xpZW50SWQiOiI2aG10MWJmb2ZjZGUxdGZsaGhjZ25zZm0yYiIsInJwY1NlcnZlciI6Imh0dHBzOi8vd2Fhcy5zZXF1ZW5jZS5hcHAifQ==";
+    "eyJwcm9qZWN0SWQiOjEzNjM5LCJycGNTZXJ2ZXIiOiJodHRwczovL3dhYXMuc2VxdWVuY2UuYXBwIn0=";
   const googleClientId =
     import.meta.env.VITE_GOOGLE_CLIENT_ID ||
     "970987756660-35a6tc48hvi8cev9cnknp0iugv9poa23.apps.googleusercontent.com";
