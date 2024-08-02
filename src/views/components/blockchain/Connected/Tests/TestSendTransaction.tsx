@@ -2,7 +2,7 @@ import { Box, Text } from "@0xsequence/design-system";
 import { useEffect, useState } from "react";
 import { Chain } from "viem";
 import { useAccount, useSendTransaction, useWalletClient } from "wagmi";
-import { chains } from "../../../../../App";
+import chains from "../../../../../utils/chains";
 import CardButton from "../../../CardButton";
 
 const TestSendTransaction = () => {

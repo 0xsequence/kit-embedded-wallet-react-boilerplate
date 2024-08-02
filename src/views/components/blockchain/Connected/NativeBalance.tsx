@@ -32,7 +32,7 @@ const NativeBalance = (props: { chain: Chain; address: Address }) => {
 
   useEffect(() => {
     if (!address || !chain) return;
-    loadNativeNetworkBalance(chain.id);
+    loadNativeNetworkBalance(chain.id).then(() => console.log("Done"));
   }, [address, chain]);
 
   return (

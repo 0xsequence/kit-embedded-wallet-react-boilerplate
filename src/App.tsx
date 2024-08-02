@@ -3,11 +3,8 @@ import { KitProvider } from "@0xsequence/kit";
 import { getDefaultWaasConnectors } from "@0xsequence/kit-connectors";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createConfig, http, WagmiProvider } from "wagmi";
-import { mainnet, polygon, Chain, polygonAmoy, arbitrumSepolia } from "wagmi/chains";
-
+import chains from "./utils/chains";
 const queryClient = new QueryClient();
-
-export const chains = [mainnet, polygon, polygonAmoy, arbitrumSepolia] as [Chain, ...Chain[]];
 
 const App = () => {
   // Get your own keys on sequence.build
