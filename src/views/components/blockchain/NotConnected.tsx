@@ -2,7 +2,6 @@ import { useOpenConnectModal } from "@0xsequence/kit";
 
 const NotConnected = () => {
   const { setOpenConnectModal } = useOpenConnectModal();
-
   const onClickConnect = () => {
     setOpenConnectModal(true);
   };

@@ -3,13 +3,13 @@ import { KitProvider } from "@0xsequence/kit";
 import { getDefaultWaasConnectors } from "@0xsequence/kit-connectors";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createConfig, http, WagmiProvider } from "wagmi";
-import { mainnet, polygon, Chain } from "wagmi/chains";
+import { mainnet, polygon, Chain, polygonAmoy, arbitrumSepolia } from "wagmi/chains";
 
 const queryClient = new QueryClient();
 
-const App = () => {
-  const chains = [mainnet, polygon] as [Chain, ...Chain[]];
+export const chains = [mainnet, polygon, polygonAmoy, arbitrumSepolia] as [Chain, ...Chain[]];
 
+const App = () => {
   // Get your own keys on sequence.build
   const projectAccessKey =
     import.meta.env.VITE_PROJECT_ACCESS_KEY ||
@@ -34,7 +34,8 @@ const App = () => {
     // Notice: Apple Login only works if deployed on https (to support Apple redirects)
     appleClientId,
     appleRedirectURI,
-    defaultChainId: 137,
+     /* Arbitrum sepolia chainId */
+    defaultChainId: 421614,
     appName: "Kit Starter",
     projectAccessKey,
   });
