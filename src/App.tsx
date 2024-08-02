@@ -31,7 +31,7 @@ const App = () => {
     // Notice: Apple Login only works if deployed on https (to support Apple redirects)
     appleClientId,
     appleRedirectURI,
-     /* Arbitrum sepolia chainId */
+    /* Arbitrum sepolia chainId */
     defaultChainId: 421614,
     appName: "Kit Starter",
     projectAccessKey,
