@@ -72,3 +72,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.margin-left-auto {
+  margin-left: auto;
+}
+
+.break-word {
+  word-break: break-word;
+}
