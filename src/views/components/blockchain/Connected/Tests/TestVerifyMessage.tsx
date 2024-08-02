@@ -89,7 +89,7 @@ const TestVerifyMessage = (props: { chainId: number }) => {
             disabled={validatingSignature}
             className="margin-left-auto"
           >
-            Sign
+            Verify
           </button>
         </Box>
         <Card>
