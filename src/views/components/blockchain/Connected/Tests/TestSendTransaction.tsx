@@ -4,6 +4,7 @@ import { Chain } from "viem";
 import { useAccount, useSendTransaction, useWalletClient } from "wagmi";
 import chains from "../../../../../utils/chains";
 import CardButton from "../../../CardButton";
+import ErrorToast from "../../../ErrorToast";
 
 const TestSendTransaction = () => {
   const { data: walletClient } = useWalletClient();
@@ -14,6 +15,7 @@ const TestSendTransaction = () => {
     sendTransaction,
     isPending: isPendingSendTxn,
     error,
+    reset,
   } = useSendTransaction();
   const [lastTransaction, setLastTransaction] = useState<string | null>(null);
 
@@ -57,6 +59,9 @@ const TestSendTransaction = () => {
             </a>
           </button>
         </Box>
+      )}
+      {error && (
+        <ErrorToast message={error?.message} onClose={reset} duration={7000} />
       )}
     </>
   );
