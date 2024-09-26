@@ -1,8 +1,8 @@
-import Home from "./views/Home";
+import Home from "./Home";
 import { getDefaultWaasConnectors, KitProvider } from "@0xsequence/kit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createConfig, http, WagmiProvider } from "wagmi";
-import chains from "./utils/chains";
+import chains from "./constants";
 import "@0xsequence/design-system/styles.css";
 const queryClient = new QueryClient();
 
