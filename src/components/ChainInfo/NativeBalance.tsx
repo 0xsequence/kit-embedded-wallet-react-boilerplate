@@ -4,9 +4,7 @@ import { allNetworks } from "@0xsequence/network";
 import { useEffect, useState } from "react";
 import { Address, Chain } from "viem";
 
-const projectAccessKey =
-  import.meta.env.NEXT_PUBLIC_PROJECT_ACCESS_KEY ||
-  "AQAAAAAAADVH8R2AGuQhwQ1y8NaEf1T7PJM";
+const projectAccessKey = import.meta.env.NEXT_PUBLIC_PROJECT_ACCESS_KEY;
 
 const NativeBalance = (props: { chain: Chain; address: Address }) => {
   const { chain, address } = props;
