@@ -53,6 +53,7 @@ const TestSendTransaction = (props: { chainId: number }) => {
             <a
               target="_blank"
               href={`${network?.blockExplorers?.default?.url}/tx/${lastTransaction}`}
+              rel="noreferrer"
             >
               Click to view on {network?.name}
             </a>

@@ -1,6 +1,6 @@
 import Home from "./Home";
 import { SequenceKit } from "@0xsequence/kit";
-import { config } from './config'
+import { config } from "./config";
 import "@0xsequence/design-system/styles.css";
 
 const App = () => {
