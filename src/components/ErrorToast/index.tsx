@@ -31,7 +31,6 @@ const ErrorToast = ({ message, duration = 5000, onClose }: ErrorToastType) => {
   useEffect(() => {
     startTimer();
     return () => clearTimer();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleMouseEnter = () => {
